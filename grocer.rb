@@ -2,7 +2,6 @@ require 'pry'
 
 def consolidate_cart(cart)
   consolidated = Hash.new(0)
-
   cart.each do |whole_cart| 
     whole_cart.each do |each_item|
       item = each_item[0]
@@ -22,14 +21,14 @@ def consolidate_cart(cart)
   consolidated
 end
 
-array = ["BEER" => {:price => 13.00, :clearance => false, :count => 3}, "BEETS" => {:price => 2.50, :clearance => false, :count => 1}]
+# array = ["BEER" => {:price => 13.00, :clearance => false, :count => 3}, "BEETS" => {:price => 2.50, :clearance => false, :count => 1}]
 
-# # consolidate_cart(array)
+# # # consolidate_cart(array)
 
-hash = {"BEER" => {:price => 13.00, :clearance => false, :count => 3},
-"BEETS" => {:price => 2.50, :clearance => false, :count => 1}}
+# hash = {"BEER" => {:price => 13.00, :clearance => false, :count => 3},
+# "BEETS" => {:price => 2.50, :clearance => false, :count => 1}}
  
-coupon = [{:item => "BEER", :num => 2, :cost => 20.00}]
+# coupon = [{:item => "BEER", :num => 2, :cost => 20.00}]
 
 def apply_coupons(cart, coupons)
   coupons.each do |coupon|
