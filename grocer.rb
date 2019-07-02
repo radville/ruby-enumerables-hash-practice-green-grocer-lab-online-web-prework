@@ -24,7 +24,6 @@ end
 # coupon = [{:item => "BEER", :num => 2, :cost => 20.00}]
 
 def apply_coupons(cart, coupons)
-  puts "step 2 cart"
   coupons.each do |coupon|
     if cart.keys.include?(coupon[:item])
       item_name = coupon[:item]
