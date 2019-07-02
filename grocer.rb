@@ -5,10 +5,11 @@ def consolidate_cart(cart)
 
   cart.each do |whole_cart| 
     whole_cart.each do |each_item|
-binding.pry
       item = each_item[0]
       if consolidated.include?(item)
         consolidated[item][:count] += each_item[1][:count]
+        binding.pry
+
       else
         details = whole_cart[item]
         details[:count] = each_item[1][:count]
