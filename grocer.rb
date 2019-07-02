@@ -14,6 +14,9 @@ def consolidate_cart(cart)
   consolidated
 end
 
+hash = {"AVOCADO"=>{:price=>3.0, :clearance=>true, :count=>0},
+ "AVOCADO"=>{:count=>2, :price=>3.0, :clearance=>true}}
+
 def apply_coupons(cart, coupons)
   coupons.each do |coupon|
     if cart.keys.include?(coupon[:item])
