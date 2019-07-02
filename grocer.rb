@@ -3,16 +3,16 @@ require 'pry'
 def consolidate_cart(cart)
   consolidated = Hash.new(0)
 
-  cart.each do |element| 
-    element.each do |inner_element|
+  cart.each do |whole_cart| 
+    whole_cart.each do |each_item|
 binding.pry
-      item = inner_element[0]
+      item = each_item[0]
       if consolidated.include?(item)
-        consolidated[item][:count] += inner_element[1][:count]
+        consolidated[item][:count] += each_item[1][:count]
       else
-        details = element[item]
-        details[:count] = inner_element[1][:count]
-        consolidated.merge!(element)
+        details = whole_cart[item]
+        details[:count] = each_item[1][:count]
+        consolidated.merge!(whole_cart)
       end
     end
   end
