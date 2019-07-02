@@ -66,8 +66,11 @@ def checkout(cart, coupons)
   coupons_cart = apply_coupons(consolidated, coupons)
   clearance_cart = apply_clearance(coupons_cart)
   sum = 0
+  puts clearance_cart
   clearance_cart.each do |element|
     item_name = element[0]
+    puts "item name"
+    puts item_name
     sum += element[1][:price]
     puts sum
   end
