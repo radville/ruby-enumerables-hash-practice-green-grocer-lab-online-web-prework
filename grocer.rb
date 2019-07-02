@@ -15,6 +15,7 @@ def consolidate_cart(cart)
       end
     end
   end
+  puts consolidated
   consolidated
 end
 
