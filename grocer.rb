@@ -14,8 +14,8 @@ def consolidate_cart(cart)
   consolidated
 end
 
-hash = {"AVOCADO"=>{:price=>3.0, :clearance=>true, :count=>3},
- "AVOCADO"=>{:count=>2, :price=>3.0, :clearance=>true}}
+hash = {"AVOCADO"=>{:price=>3.0, :clearance=>true, :count=>7},
+ "KALE"=>{:count=>2, :price=>3.0, :clearance=>true}}
  
 coupon = [{:item=>"AVOCADO", :num=>2, :cost=>5.0}]
 
