@@ -15,7 +15,7 @@ def consolidate_cart(cart)
   consolidated
 end
 
-array = ["BEER" => {:price => 13.00, :clearance => false, :count => 2}, "BEER" => {:price => 13.00, :clearance => false, :count => 1}, "BEETS" => {:price => 2.50, :clearance => false, :count => 1}]
+array = ["BEER" => {:price => 13.00, :clearance => false, :count => 3}, "BEETS" => {:price => 2.50, :clearance => false, :count => 1}]
 
 # # consolidate_cart(array)
 
