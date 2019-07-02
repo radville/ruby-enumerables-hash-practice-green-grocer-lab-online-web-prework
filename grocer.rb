@@ -3,7 +3,7 @@ require 'pry'
 def consolidate_cart(cart)
   consolidated = Hash.new(0)
   cart.each do |element| 
-    do |inner_element|
+    element.each do |inner_element|
           binding.pry
       item = element.keys[0]
     if consolidated.include?(item)
