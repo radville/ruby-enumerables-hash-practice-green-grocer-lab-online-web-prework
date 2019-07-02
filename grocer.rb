@@ -9,7 +9,7 @@ def consolidate_cart(cart)
         puts "item"
         puts consolidated
         puts each_item[1][:count]
-        consolidated[item][:count] += each_item[1][:count]
+        consolidated[item][:count] += 1
       else
         consolidated[item] = each_item[1]
         consolidated[item][:count] = 1
