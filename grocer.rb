@@ -11,11 +11,16 @@ def consolidate_cart(cart)
       consolidated.merge!(element)
     end
   end
-  consolidated
+  puts consolidated
 end
 
-array = [{"AVOCADO"=>{:price=>3.0, :clearance=>true, :count=>7},
- "KALE"=>{:count=>2, :price=>3.0, :clearance=>true}}]
+array = [
+  {"AVOCADO" => {:price => 3.00, :clearance => true }},
+  {"AVOCADO" => {:price => 3.00, :clearance => true }},
+  {"KALE"    => {:price => 3.00, :clearance => false}}
+]
+
+consolidate_cart(array)
 
 hash = {"AVOCADO"=>{:price=>3.0, :clearance=>true, :count=>7},
  "KALE"=>{:count=>2, :price=>3.0, :clearance=>true}}
