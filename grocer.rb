@@ -7,15 +7,12 @@ def consolidate_cart(cart)
       item = each_item[0]
       if consolidated.include?(item)
         consolidated[item][:count] += each_item[1][:count]
-
       else
         consolidated[item] = each_item[1]
         consolidated[item][:count] = 1
       end
     end
   end
-                              # binding.pry
-
   consolidated
 end
 
@@ -38,7 +35,7 @@ def apply_coupons(cart, coupons)
           price: coupon[:cost] / coupon[:num],
           clearance: cart[item_name][:clearance],
           count: coupon[:num]
-        }
+          }
       end
       cart[item_name][:count] -= coupon[:num]
     end
@@ -46,11 +43,11 @@ def apply_coupons(cart, coupons)
   cart
 end
 
-array = ["CHEESE" => {:price => 6.50, :clearance => false, :count => 5}]
-coupon = [{:item => "CHEESE", :num => 3, :cost => 15.00}]
-puts consolidate_cart(array)
-hash = {"CHEESE" => {:price => 6.50, :clearance => false, :count => 5}}
-puts apply_coupons(hash, coupon)
+# array = ["CHEESE" => {:price => 6.50, :clearance => false, :count => 5}]
+# coupon = [{:item => "CHEESE", :num => 3, :cost => 15.00}]
+# puts consolidate_cart(array)
+# hash = {"CHEESE" => {:price => 6.50, :clearance => false, :count => 5}}
+# puts apply_coupons(hash, coupon)
 
 # apply_coupons(hash, coupon)
 
@@ -61,6 +58,7 @@ def apply_clearance(cart)
       cart[item_name][:price] = (cart[item_name][:price] * 0.80).round(2)
     end
   end
+  cart
 end
 
 def checkout(cart, coupons)
