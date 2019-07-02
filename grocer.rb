@@ -1,4 +1,5 @@
 require 'pry'
+
 def consolidate_cart(cart)
   consolidated = Hash.new(0)
   cart.each do |element| 
@@ -61,12 +62,12 @@ def checkout(cart, coupons)
   clearance_cart = apply_clearance(coupons_cart)
   sum = 0
   clearance_cart.each do |element|
+        binding.pry
     item_name = element[0]
     sum += element[1][:price]
   end
   if sum > 100
     sum = sum * 0.90
   end
-    binding.pry
 sum
 end
