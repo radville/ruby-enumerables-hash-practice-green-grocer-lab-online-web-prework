@@ -14,8 +14,10 @@ def consolidate_cart(cart)
   consolidated
 end
 
-hash = {"AVOCADO"=>{:price=>3.0, :clearance=>true, :count=>0},
+hash = {"AVOCADO"=>{:price=>3.0, :clearance=>true, :count=>3},
  "AVOCADO"=>{:count=>2, :price=>3.0, :clearance=>true}}
+ 
+coupon = [{:item=>"AVOCADO", :num=>2, :cost=>5.0}]
 
 def apply_coupons(cart, coupons)
   coupons.each do |coupon|
@@ -38,6 +40,7 @@ def apply_coupons(cart, coupons)
   cart
 end
 
+apply_coupons(hash, coupon)
 
 def apply_clearance(cart)
   cart.each do |element|
