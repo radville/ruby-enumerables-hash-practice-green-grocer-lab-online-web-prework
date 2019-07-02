@@ -34,8 +34,8 @@ def apply_coupons(cart, coupons)
   cart
 end
 
-items) do
-    [
+items = 
+    {
       {"AVOCADO" => {:price => 3.00, :clearance => true}},
       {"KALE" => {:price => 3.00, :clearance => false}},
       {"BLACK_BEANS" => {:price => 2.50, :clearance => false}},
@@ -46,15 +46,16 @@ items) do
       {"PEANUTBUTTER" => {:price => 3.00, :clearance => true}},
       {"BEETS" => {:price => 2.50, :clearance => false}},
       {"SOY MILK" => {:price => 4.50, :clearance => true}}
-    ]
-  end
+    }
 
-  let(:coupons) do
+coupons =
     [
       {:item => "AVOCADO", :num => 2, :cost => 5.00},
       {:item => "BEER", :num => 2, :cost => 20.00},
       {:item => "CHEESE", :num => 3, :cost => 15.00}
     ]
+
+apply_coupons(items, coupons)
 
 def apply_clearance(cart)
   cart.each do |element|
