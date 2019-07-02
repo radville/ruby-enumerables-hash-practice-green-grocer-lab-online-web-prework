@@ -4,6 +4,7 @@ def consolidate_cart(cart)
   consolidated = Hash.new(0)
   cart.each do |element| 
     item = element.keys[0]
+    binding.pry
     if consolidated.include?(item)
       consolidated[item][:count] += 1
     else
