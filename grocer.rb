@@ -29,7 +29,7 @@ def apply_coupons(cart, coupons)
     if cart.keys.include?(coupon[:item])
       item_name = coupon[:item]
       new_item_name = "#{item_name} W/COUPON"
-      if cart.key?(new_item_name)
+      if cart.key?(new_item_name) && cart[item_name][:count] >= coupon[:num]
         cart[new_item_name][:count] += coupon[:num]
       else
           cart[new_item_name] = {
