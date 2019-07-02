@@ -7,11 +7,12 @@ def consolidate_cart(cart)
       item = each_item[0]
       if consolidated.include?(item)
         consolidated[item][:count] += each_item[1][:count]
-        binding.pry
 
       else
         consolidated[item] = each_item[1]
-        consolidated.merge!(each_item)
+        # consolidated.merge!(each_item)
+                binding.pry
+
       end
     end
   end
