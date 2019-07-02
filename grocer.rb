@@ -14,6 +14,9 @@ def consolidate_cart(cart)
   consolidated
 end
 
+array = [{"AVOCADO"=>{:price=>3.0, :clearance=>true, :count=>7},
+ "KALE"=>{:count=>2, :price=>3.0, :clearance=>true}}]
+
 hash = {"AVOCADO"=>{:price=>3.0, :clearance=>true, :count=>7},
  "KALE"=>{:count=>2, :price=>3.0, :clearance=>true}}
  
