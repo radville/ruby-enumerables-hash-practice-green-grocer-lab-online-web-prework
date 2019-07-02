@@ -14,15 +14,15 @@ def consolidate_cart(cart)
   puts consolidated
 end
 
-array = ["BEER" => {:price => 13.00, :clearance => false, :count => 3},
- "BEETS" => {:price => 2.50, :clearance => false, :count => 1}]
+# array = ["BEER" => {:price => 13.00, :clearance => false, :count => 3},
+# "BEETS" => {:price => 2.50, :clearance => false, :count => 1}]
 
-# consolidate_cart(array)
+# # consolidate_cart(array)
 
-hash = {"BEER" => {:price => 13.00, :clearance => false, :count => 3},
- "BEETS" => {:price => 2.50, :clearance => false, :count => 1}}
+# hash = {"BEER" => {:price => 13.00, :clearance => false, :count => 3},
+# "BEETS" => {:price => 2.50, :clearance => false, :count => 1}}
  
-coupon = [{:item => "BEER", :num => 2, :cost => 20.00}]
+# coupon = [{:item => "BEER", :num => 2, :cost => 20.00}]
 
 def apply_coupons(cart, coupons)
   coupons.each do |coupon|
@@ -67,5 +67,6 @@ def checkout(cart, coupons)
   if sum > 100
     sum = sum * 0.90
   end
-  puts sum
+  sum
+  binding.pry
 end
