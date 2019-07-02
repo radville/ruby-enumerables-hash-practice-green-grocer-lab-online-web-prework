@@ -22,7 +22,7 @@ array = [
 
 consolidate_cart(array)
 
-hash = {"AVOCADO"=>{:price=>3.0, :clearance=>true, :count=>7},
+hash = {"BEER" => {:price => 13.00, :clearance => false, :count => 3},
  "KALE"=>{:count=>2, :price=>3.0, :clearance=>true}}
  
 coupon = [{:item=>"AVOCADO", :num=>2, :cost=>5.0}]
