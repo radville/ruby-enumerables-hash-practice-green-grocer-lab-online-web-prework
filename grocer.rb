@@ -7,15 +7,15 @@ def consolidate_cart(cart)
       item = element.keys[0]
       if consolidated.include?(item)
         consolidated[item][:count] += inner_element[1][:count]
-                  binding.pry
-
       else
         details = element[item]
-        details[:count] = 1
+        details[:count] = inner_element[1][count]
         consolidated.merge!(element)
       end
     end
   end
+                    binding.pry
+
   consolidated
 end
 
