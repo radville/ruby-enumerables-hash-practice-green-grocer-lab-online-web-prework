@@ -1,8 +1,6 @@
 require 'pry'
 
 def consolidate_cart(cart)
-  puts "step 1 cart"
-  puts cart
   consolidated = Hash.new(0)
   cart.each do |whole_cart| 
     whole_cart.each do |each_item|
@@ -15,7 +13,6 @@ def consolidate_cart(cart)
       end
     end
   end
-  puts consolidated
   consolidated
 end
 
@@ -27,6 +24,8 @@ end
 # coupon = [{:item => "BEER", :num => 2, :cost => 20.00}]
 
 def apply_coupons(cart, coupons)
+  puts "step 2 cart"
+  puts cart
   coupons.each do |coupon|
     if cart.keys.include?(coupon[:item])
       item_name = coupon[:item]
