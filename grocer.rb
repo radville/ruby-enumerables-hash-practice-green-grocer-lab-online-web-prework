@@ -41,9 +41,8 @@ def apply_coupons(cart, coupons)
       cart[item_name][:count] -= coupon[:num]
     end
   end
+  puts cart
   cart
-    puts cart
-
 end
 
 array = [{"CHEESE" => {:price => 6.50, :clearance => false}}, {"CHEESE" => {:price => 6.50, :clearance => false}},{"CHEESE" => {:price => 6.50, :clearance => false}},{"CHEESE" => {:price => 6.50, :clearance => false}},{"CHEESE" => {:price => 6.50, :clearance => false}}]
