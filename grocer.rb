@@ -35,11 +35,6 @@ def apply_coupons(cart, coupons)
   cart
 end
 
-items = {{"AVOCADO" => {:price => 3.00, :clearance => true}}, {"AVOCADO" => {:price => 3.00, :clearance => true}}}
-
-coupons =[ {:item => "AVOCADO", :num => 2, :cost => 5.00},{:item => "BEER", :num => 2, :cost => 20.00},{:item => "CHEESE", :num => 3, :cost => 15.00}]
-
-apply_coupons(items, coupons)
 
 def apply_clearance(cart)
   cart.each do |element|
