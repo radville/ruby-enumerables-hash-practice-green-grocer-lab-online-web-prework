@@ -71,7 +71,7 @@ def checkout(cart, coupons)
     item_name = element[0]
     puts "item name"
     puts item_name
-    sum += element[1][:price]
+    sum += (element[1][:price] * element[1][:count])
     puts sum
   end
   if sum > 100
