@@ -1,6 +1,8 @@
 require 'pry'
 
 def consolidate_cart(cart)
+  puts "step 1 cart"
+  puts cart
   consolidated = Hash.new(0)
   cart.each do |whole_cart| 
     whole_cart.each do |each_item|
