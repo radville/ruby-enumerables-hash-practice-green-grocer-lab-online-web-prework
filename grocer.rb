@@ -69,5 +69,3 @@ def checkout(cart, coupons)
   end
   puts sum
 end
-
-checkout(hash, coupon)
