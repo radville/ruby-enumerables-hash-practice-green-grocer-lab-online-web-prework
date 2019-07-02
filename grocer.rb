@@ -6,9 +6,6 @@ def consolidate_cart(cart)
     whole_cart.each do |each_item|
       item = each_item[0]
       if consolidated.include?(item)
-        puts "item"
-        puts consolidated
-        puts each_item[1][:count]
         consolidated[item][:count] += 1
       else
         consolidated[item] = each_item[1]
@@ -72,6 +69,7 @@ def checkout(cart, coupons)
   clearance_cart.each do |element|
     item_name = element[0]
     sum += element[1][:price]
+    puts sum
   end
   if sum > 100
     sum = sum * 0.90
