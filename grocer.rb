@@ -20,7 +20,7 @@ array = [
   {"KALE"    => {:price => 3.00, :clearance => false}}
 ]
 
-consolidate_cart(array)
+# consolidate_cart(array)
 
 hash = {"BEER" => {:price => 13.00, :clearance => false, :count => 3},
  "BEETS" => {:price => 2.50, :clearance => false, :count => 1}}
