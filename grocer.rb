@@ -9,7 +9,7 @@ def consolidate_cart(cart)
         consolidated[item][:count] += inner_element[1][:count]
       else
         details = element[item]
-        details[:count] = inner_element[1][count]
+        details[:count] = inner_element[1][:count]
         consolidated.merge!(element)
       end
     end
