@@ -16,13 +16,6 @@ def consolidate_cart(cart)
   consolidated
 end
 
-# array = ["BEER" => {:price => 13.00, :clearance => false, :count => 3}, "BEETS" => {:price => 2.50, :clearance => false, :count => 1}]
-
-# hash = {"BEER" => {:price => 13.00, :clearance => false, :count => 3},
-# "BEETS" => {:price => 2.50, :clearance => false, :count => 1}}
- 
-# coupon = [{:item => "BEER", :num => 2, :cost => 20.00}]
-
 def apply_coupons(cart, coupons)
   coupons.each do |coupon|
     if cart.keys.include?(coupon[:item])
@@ -62,15 +55,10 @@ def checkout(cart, coupons)
   sum = 0
   clearance_cart.each do |element|
     item_name = element[0]
-    puts "item name"
-    puts item_name
     sum += (element[1][:price] * element[1][:count])
-    puts sum
   end
   if sum > 100
     sum = sum * 0.90
   end
 sum
 end
-# puts consolidate_cart(array)
-# puts checkout(array, coupon)
