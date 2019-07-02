@@ -8,7 +8,7 @@ def consolidate_cart(cart)
       if consolidated.include?(item)
         puts "item"
         puts consolidated
-        puts consolidated[item][:count]
+        puts each_item[1][:count]
         consolidated[item][:count] += each_item[1][:count]
       else
         consolidated[item] = each_item[1]
