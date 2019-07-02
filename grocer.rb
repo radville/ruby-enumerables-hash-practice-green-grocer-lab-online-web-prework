@@ -11,9 +11,6 @@ def consolidate_cart(cart)
       else
         consolidated[item] = each_item[1]
         consolidated[item][:count] = 1
-        # consolidated.merge!(each_item)
-                binding.pry
-
       end
     end
   end
