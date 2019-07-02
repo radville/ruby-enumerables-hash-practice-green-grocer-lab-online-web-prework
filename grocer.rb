@@ -67,6 +67,7 @@ def checkout(cart, coupons)
   clearance_cart = apply_clearance(coupons_cart)
   sum = 0
   puts clearance_cart
+  puts coupons
   clearance_cart.each do |element|
     item_name = element[0]
     puts "item name"
