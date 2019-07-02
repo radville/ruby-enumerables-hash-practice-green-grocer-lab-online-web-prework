@@ -6,6 +6,8 @@ def consolidate_cart(cart)
     whole_cart.each do |each_item|
       item = each_item[0]
       if consolidated.include?(item)
+        puts "item"
+        puts item
         consolidated[item][:count] += each_item[1][:count]
       else
         consolidated[item] = each_item[1]
