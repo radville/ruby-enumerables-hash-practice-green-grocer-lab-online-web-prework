@@ -7,7 +7,7 @@ def consolidate_cart(cart)
     element.each do |inner_element|
                             binding.pry
 
-      item = element.keys[0]
+      item = inner_element.keys[0]
       if consolidated.include?(item)
         consolidated[item][:count] += inner_element[1][:count]
       else
