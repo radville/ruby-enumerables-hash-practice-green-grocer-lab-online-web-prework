@@ -45,14 +45,6 @@ def apply_coupons(cart, coupons)
   cart
 end
 
-# array = [{"CHEESE" => {:price => 6.50, :clearance => false}}, {"CHEESE" => {:price => 6.50, :clearance => false}},{"CHEESE" => {:price => 6.50, :clearance => false}},{"CHEESE" => {:price => 6.50, :clearance => false}},{"CHEESE" => {:price => 6.50, :clearance => false}}]
-# coupon = [{:item => "CHEESE", :num => 3, :cost => 15.00}]
-# puts consolidate_cart(array)
-# hash = {"CHEESE" => {:price => 6.50, :clearance => false, :count => 5}}
-# puts apply_coupons(hash, coupon)
-
-# apply_coupons(hash, coupon)
-
 def apply_clearance(cart)
   cart.each do |element|
     item_name = element[0]
@@ -68,12 +60,6 @@ def checkout(cart, coupons)
   coupons_cart = apply_coupons(consolidated, coupons)
   clearance_cart = apply_clearance(coupons_cart)
   sum = 0
-  puts "cart"
-  puts cart
-  puts "coupons cart"
-  puts coupons_cart
-  puts "coupons"
-  puts coupons
   clearance_cart.each do |element|
     item_name = element[0]
     puts "item name"
