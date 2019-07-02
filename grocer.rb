@@ -25,7 +25,6 @@ end
 
 def apply_coupons(cart, coupons)
   puts "step 2 cart"
-  puts cart
   coupons.each do |coupon|
     if cart.keys.include?(coupon[:item])
       item_name = coupon[:item]
@@ -43,6 +42,8 @@ def apply_coupons(cart, coupons)
     end
   end
   cart
+    puts cart
+
 end
 
 array = [{"CHEESE" => {:price => 6.50, :clearance => false}}, {"CHEESE" => {:price => 6.50, :clearance => false}},{"CHEESE" => {:price => 6.50, :clearance => false}},{"CHEESE" => {:price => 6.50, :clearance => false}},{"CHEESE" => {:price => 6.50, :clearance => false}}]
