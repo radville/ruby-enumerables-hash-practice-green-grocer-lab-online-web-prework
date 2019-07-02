@@ -48,6 +48,7 @@ end
 
 array = ["CHEESE" => {:price => 6.50, :clearance => false, :count => 5}]
 coupon = [{:item => "CHEESE", :num => 3, :cost => 15.00}]
+puts consolidate_cart(array)
 hash = consolidate_cart(array)
 puts apply_coupons(hash, coupon)
 
