@@ -10,9 +10,9 @@ def consolidate_cart(cart)
         binding.pry
 
       else
-        details = whole_cart[item]
+        consolidated[item] = details = whole_cart[item]
         details[:count] = each_item[1][:count]
-        consolidated.merge!(whole_cart)
+        consolidated.merge!(each_item)
       end
     end
   end
