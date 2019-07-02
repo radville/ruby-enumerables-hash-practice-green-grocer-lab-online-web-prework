@@ -44,7 +44,7 @@ def apply_coupons(cart, coupons)
   puts cart
 end
 
-apply_coupons(hash, coupon)
+# apply_coupons(hash, coupon)
 
 def apply_clearance(cart)
   cart.each do |element|
