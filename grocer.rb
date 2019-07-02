@@ -21,11 +21,10 @@ end
 
 # array = ["BEER" => {:price => 13.00, :clearance => false, :count => 3}, "BEETS" => {:price => 2.50, :clearance => false, :count => 1}]
 
-
 # hash = {"BEER" => {:price => 13.00, :clearance => false, :count => 3},
 # "BEETS" => {:price => 2.50, :clearance => false, :count => 1}}
  
-# coupon = [{:item => "BEER", :num => 2, :cost => 20.00}]
+coupon = [{:item => "BEER", :num => 2, :cost => 20.00}]
 
 def apply_coupons(cart, coupons)
   coupons.each do |coupon|
@@ -48,7 +47,7 @@ def apply_coupons(cart, coupons)
 end
 
 array = ["CHEESE" => {:price => 6.50, :clearance => false, :count => 5}]
-coupon = [{:item => "CHEESE", :num => 3, :cost => 15.00}]
+# coupon = [{:item => "CHEESE", :num => 3, :cost => 15.00}]
 puts consolidate_cart(array)
 puts apply_coupons(array, coupon)
 
