@@ -44,9 +44,11 @@ def apply_coupons(cart, coupons)
 end
 
 array = [
-  {"CHEESE" => {:price => 3.00, :clearance => true }},
-  {"CHEESE" => {:price => 3.00, :clearance => true }},
-  {"CHEESE" => {:price => 3.00, :clearance => false}}
+  {"CHEESE" => {:price => 6.50, :clearance => true }},
+  {"CHEESE" => {:price => 6.50, :clearance => true }},
+  {"CHEESE" => {:price => 6.50, :clearance => true }},
+  {"CHEESE" => {:price => 6.50, :clearance => true }},
+  {"CHEESE" => {:price => 6.50, :clearance => false}}
 ]
 coupon = [{:item => "CHEESE", :num => 3, :cost => 15.00}]
 puts consolidate_cart(array)
