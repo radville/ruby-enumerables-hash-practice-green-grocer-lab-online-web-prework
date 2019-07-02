@@ -31,6 +31,7 @@ def apply_coupons(cart, coupons)
       if cart.key?(new_item_name) && cart[item_name][:count] >= coupon[:num]
         cart[new_item_name][:count] += coupon[:num]
       elsif cart.key?(new_item_name) && cart[item_name][:count] < coupon[:num]
+        cart[item_name][:count] += coupon[:num]
       else
           cart[new_item_name] = {
           price: coupon[:cost] / coupon[:num],
